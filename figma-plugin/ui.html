@@ -1,0 +1,24 @@
+<style>
+  body { font: 12px Inter, system-ui, sans-serif; margin: 0; padding: 14px; color: #1d1d1f; }
+  button { width: 100%; padding: 9px; border: 0; border-radius: 8px; background: #5741f3; color: #fff; font-weight: 600; cursor: pointer; }
+  p { margin: 0 0 10px; color: #6e6e73; }
+  textarea { position: fixed; left: -9999px; }
+</style>
+<p id="msg">Click to copy your colours for Palette.</p>
+<button id="btn">Copy colors</button>
+<textarea id="ta"></textarea>
+<script>
+  let text = '';
+  function copy() {
+    const ta = document.getElementById('ta'); ta.value = text; ta.focus(); ta.select();
+    let ok = false; try { ok = document.execCommand('copy'); } catch (e) {}
+    return ok;
+  }
+  onmessage = (e) => {
+    const m = e.data.pluginMessage; if (!m || m.type !== 'copy') return;
+    text = m.text;
+    document.getElementById('btn').textContent = 'Copy ' + m.count + ' colors';
+    parent.postMessage({ pluginMessage: { type: copy() ? 'copied' : 'needs-click' } }, '*');
+  };
+  document.getElementById('btn').onclick = () => { if (copy()) parent.postMessage({ pluginMessage: { type: 'copied' } }, '*'); };
+</script>

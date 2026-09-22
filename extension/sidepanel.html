@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Palette</title>
+<script src="theme.js"></script>
+<link rel="stylesheet" href="sidepanel.css">
+</head>
+<body>
+<header class="top">
+  <div class="head-sum" id="headSum" hidden><b id="sumCount">0 colors</b><span id="sumSrc"></span></div><div class="spacer"></div><button class="link" id="clearBtn" hidden>Clear</button>
+  <button class="dots" id="menuBtn" aria-label="More" aria-haspopup="true">
+    <svg viewBox="0 0 4 16" width="4" height="16"><circle cx="2" cy="2" r="1.6"/><circle cx="2" cy="8" r="1.6"/><circle cx="2" cy="14" r="1.6"/></svg>
+  </button>
+  <div class="menu" id="menu" role="menu" hidden>
+    <div class="menu-label">Names</div>
+    <div class="seg" data-setting="naming">
+      <button data-v="smart">Smart</button><button data-v="name">Name only</button><button data-v="path">Full path</button>
+    </div>
+    <div class="menu-label">Appearance</div>
+    <div class="seg" data-setting="theme">
+      <button data-v="system">Auto</button><button data-v="light">Light</button><button data-v="dark">Dark</button>
+    </div>
+    <div class="menu-sep"></div>
+    <button class="menu-item" id="restoreBtn">Restore a backup…</button>
+    <button class="menu-item" id="figmaHelpBtn">Get the Figma plugin</button>
+  </div>
+</header>
+
+<main id="main">
+  <!-- not in Kirki -->
+  <section class="view" id="vNoKirki" hidden>
+    <div class="empty">
+      <img src="brand/logo.svg" alt="" class="empty-logo">
+      <h2>Open the Kirki editor</h2>
+      <p>Palette adds colours to the page you're editing in Kirki.</p>
+    </div>
+  </section>
+
+  <!-- empty / drop -->
+  <section class="view start" id="vEmpty" hidden>
+    <div class="brand">
+      <img src="brand/logo.svg" alt="" class="brand-logo">
+      <h1>Palette</h1>
+      <p>Bring colour variables into Kirki.</p>
+    </div>
+    <label class="drop" id="drop" tabindex="0">
+      <input type="file" id="file" accept="image/png,image/jpeg,image/webp" hidden>
+      <svg class="drop-icon" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="9" cy="9.5" r="1.8" fill="currentColor"/><path d="M4.5 17l4.5-4.5 3.5 3.5 2.5-2.5 4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+      <strong>Import from an image</strong>
+      <span>Paste with <kbd>⌘</kbd><kbd>V</kbd>, drop, or click to choose</span>
+    </label>
+    <div class="source">
+      <svg class="drop-icon" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M9 3h3v6H9a3 3 0 010-6zM12 3h3a3 3 0 010 6h-3zM9 9h3v6H9a3 3 0 010-6zM15 15a3 3 0 110-6 3 3 0 010 6zM9 15h3v3a3 3 0 11-3-3z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+      <strong>Import from Figma</strong>
+      <ol>
+        <li>In Figma, run <b>Palette — Copy colors</b> <span class="k"><kbd>⌘</kbd><kbd>/</kbd></span></li>
+        <li>Come back here — your colours appear automatically</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- reading an image -->
+  <section class="view" id="vBusy" hidden>
+    <div class="busy" id="busy">
+      <img src="brand/logo.svg" alt="" class="busy-logo">
+      <div class="busy-text" id="busyText">Reading colours…</div>
+      <div class="bar"><i id="busyBar"></i></div>
+      <div class="busy-pct" id="busyPct">0%</div>
+    </div>
+  </section>
+
+  <!-- review -->
+  <section class="view" id="vReview" hidden>
+    <div class="sync" id="syncBar" hidden></div>
+    <div class="modes" id="modes"></div>
+    <div id="groups"></div>
+  </section>
+</main>
+
+<footer class="foot" id="foot" hidden>
+  <button class="primary" id="importBtn">Add variables</button>
+</footer>
+
+<div class="banner" id="banner" hidden></div>
+<div class="toast" id="toast" hidden></div>
+
+<div class="sheet" id="sheet" hidden>
+  <div class="sheet-card">
+    <h3 id="sheetTitle"></h3>
+    <div id="sheetBody"></div>
+    <div class="sheet-actions"><button class="ghost" id="sheetCancel">Cancel</button><button class="primary" id="sheetOk">OK</button></div>
+  </div>
+</div>
+
+<script src="merge.js"></script>
+<script src="parse-image.js"></script>
+<script src="kirki.js"></script>
+<script src="vendor/tesseract/tesseract.min.js"></script>
+<script src="sidepanel.js"></script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+{
+ "globalColors": [],
+ "shadows": [],
+ "variableData": {
+  "data": [
+   {
+    "title": "Colors",
+    "key": "color",
+    "modes": [
+     {
+      "title": "Default",
+      "key": "default"
+     },
+     {
+      "title": "New Mode",
+      "key": "k-mzmrz83q"
+     }
+    ],
+    "variables": [
+     {
+      "id": "k-mii4xpxq",
+      "title": "Primary",
+      "type": "color",
+      "value": {
+       "default": "rgba(25, 115, 238, 1.00)"
+      }
+     },
+     {
+      "id": "k-tfnwakzs",
+      "title": "White",
+      "type": "color",
+      "value": {
+       "default": "rgba(255, 255, 255, 1.00)"
+      }
+     },
+     {
+      "id": "k-4ebcvz68",
+      "title": "Black",
+      "type": "color",
+      "value": {
+       "default": "rgba(0, 0, 0, 1.00)"
+      }
+     },
+     {
+      "id": "k-uf7unrui",
+      "title": "White-80",
+      "type": "color",
+      "value": {
+       "default": "rgba(255, 255, 255, 0.8)"
+      }
+     },
+     {
+      "id": "k-b07nqxee",
+      "title": "Neutral-25",
+      "type": "color",
+      "value": {
+       "default": "rgba(247, 247, 247, 1.00)"
+      }
+     },
+     {
+      "id": "k-1pok7dpi",
+      "title": "Test",
+      "type": "color",
+      "value": {
+       "default": "rgba(250, 88, 13, 0.8)",
+       "k-mzmrz83q": "rgba(35, 22, 16, 0.8)"
+      }
+     }
+    ]
+   },
+   {
+    "title": "Numbers",
+    "key": "size",
+    "modes": [
+     {
+      "title": "Default",
+      "key": "default"
+     },
+     {
+      "title": "New Mode",
+      "key": "k-mzmrz83q"
+     }
+    ],
+    "variables": []
+   },
+   {
+    "title": "Text Styles",
+    "key": "text-style",
+    "modes": [
+     {
+      "title": "Default",
+      "key": "default"
+     },
+     {
+      "title": "New Mode",
+      "key": "k-mzmrz83q"
+     }
+    ],
+    "variables": [
+     {
+      "id": "k-nya2uhmw",
+      "title": "Heading 1",
+      "type": "text-style",
+      "value": {
+       "default": {
+        "tag": "h1",
+        "font-family": "var(--k-a46oa7rl)",
+        "styles": {
+         "md": {
+          "font-weight": "600",
+          "font-size": {
+           "value": 48,
+           "unit": "px"
+          },
+          "line-height": {
+           "value": 1.2,
+           "unit": "em"
+          },
+          "letter-spacing": {
+           "value": 0,
+           "unit": "px"
+          }
+         }
+        }
+       }
+      }
+     }
+    ]
+   },
+   {
+    "title": "Font Family",
+    "key": "font-family",
+    "modes": [
+     {
+      "title": "Default",
+      "key": "default"
+     },
+     {
+      "title": "New Mode",
+      "key": "k-mzmrz83q"
+     }
+    ],
+    "variables": [
+     {
+      "id": "k-a46oa7rl",
+      "title": "Inter",
+      "type": "font-family",
+      "value": {
+       "default": "Inter"
+      }
+     }
+    ]
+   }
+  ]
+ }
+}
