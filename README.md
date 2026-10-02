@@ -19,17 +19,15 @@ Palette is two small pieces that work together:
 ### Screenshots
 
 <div align="center">
-
-<img src="docs/screenshots/panel-review-dark.png" alt="The Palette panel reviewing colours before import" width="760">
-
-*The panel after an import — every colour it found, with name, swatch, hex and opacity per mode, ready to review.*
-
+<img src="docs/screenshots/review-dark.png" alt="The Palette panel reviewing 33 colours read from an image" width="330">
 </div>
 
-| Image import | Light & dark |
-|---|---|
-| <img src="docs/screenshots/panel-image.png" alt="Reading a colour chart image" width="380"> | <img src="docs/screenshots/panel-light.png" alt="The panel in light mode" width="380"> |
-| A pasted colour-chart screenshot, read on-device and turned into rows. | The same panel in light mode — it follows your system theme. |
+*After an import: mode mapping at the top, then every colour grouped as it was named — swatch, hex and opacity — each one tickable. Then **Add 33 variables**.*
+
+| Light | Start | From this image |
+|---|---|---|
+| <img src="docs/screenshots/review-light.png" alt="The same review in light mode" width="250"> | <img src="docs/screenshots/start-light.png" alt="Empty state" width="250"> | <img src="docs/screenshots/source-chart.png" alt="A colour chart screenshot" width="250"> |
+| The same panel in light mode — it follows your system theme. | Paste an image, or run the Figma plugin and come back. | A plain screenshot of a colour chart is all the image import needs. |
 
 ## Features
 - **Figma → Kirki in two actions:** run the plugin, open the panel, click **Add**.
