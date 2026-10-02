@@ -16,6 +16,21 @@ Palette is two small pieces that work together:
 | Chrome extension (MV3 side panel) | [`extension/`](extension) | Reads colours (from the clipboard or an image), lets you review them, and writes them into Kirki's Variables. |
 | Figma plugin | [`figma-plugin/`](figma-plugin) | Copies all local colour variables (all modes, aliases resolved) to the clipboard in one click. |
 
+### Screenshots
+
+<div align="center">
+
+<img src="docs/screenshots/panel-review-dark.png" alt="The Palette panel reviewing colours before import" width="760">
+
+*The panel after an import — every colour it found, with name, swatch, hex and opacity per mode, ready to review.*
+
+</div>
+
+| Image import | Light & dark |
+|---|---|
+| <img src="docs/screenshots/panel-image.png" alt="Reading a colour chart image" width="380"> | <img src="docs/screenshots/panel-light.png" alt="The panel in light mode" width="380"> |
+| A pasted colour-chart screenshot, read on-device and turned into rows. | The same panel in light mode — it follows your system theme. |
+
 ## Features
 - **Figma → Kirki in two actions:** run the plugin, open the panel, click **Add**.
 - **Image → Kirki:** paste or drop a screenshot of a colour table; names, groups, hex and opacity are read with on-device OCR (Tesseract, no network).
