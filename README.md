@@ -1,4 +1,11 @@
+<img src="extension/brand/logo.svg" alt="Palette" width="88">
+
 # Palette
+
+![Chrome MV3](https://img.shields.io/badge/Chrome-MV3_side_panel-4285F4?style=flat-square&logo=googlechrome&logoColor=white)
+![Figma plugin](https://img.shields.io/badge/Figma-plugin-F24E1E?style=flat-square&logo=figma&logoColor=white)
+![OCR](https://img.shields.io/badge/OCR-on--device-5641F4?style=flat-square)
+![Version](https://img.shields.io/badge/version-1.1.0-555?style=flat-square)
 
 Bring colour variables into **Kirki** — from **Figma** or from an **image of a colour chart** — with names, opacity and modes.
 
